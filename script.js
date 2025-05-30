@@ -10,13 +10,12 @@ function calculate() {
   const daysLived = Math.floor(msLived / (1000 * 60 * 60 * 24));
   const daysLeft = Math.max(0, Math.floor(80 * 365.25 - daysLived));
 
-  const avgHeartRate = 80; // bpm
+  const avgHeartRate = 80;
   const avgBreathsPerMin = 16;
 
   const heartbeats = Math.floor((msLived / 1000 / 60) * avgHeartRate).toLocaleString();
   const breaths = Math.floor((msLived / 1000 / 60) * avgBreathsPerMin).toLocaleString();
 
-  // Display results in table
   document.getElementById('heartbeats').textContent = heartbeats;
   document.getElementById('breaths').textContent = breaths;
   document.getElementById('daysLived').textContent = daysLived.toLocaleString();
@@ -24,7 +23,6 @@ function calculate() {
 
   document.getElementById('results').classList.remove('hidden');
 
-  // Chart
   const ctx = document.getElementById('lifeChart').getContext('2d');
   if (window.lifeChart) window.lifeChart.destroy();
   window.lifeChart = new Chart(ctx, {
