@@ -39,7 +39,6 @@ No installation needed — just your browser!
 ## 🖼️ Preview
 
 ![screenshot](LifeInNumbers.png)  
-<sub>_(Replace this with a real image of your project if you have one)_</sub>
 
 ---
 
